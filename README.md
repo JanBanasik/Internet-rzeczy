@@ -1,4 +1,4 @@
-### Pomysł 1: Inteligentna stacja do monitorowania i pielęgnacji roślin doniczkowych
+### Inteligentna stacja do monitorowania i pielęgnacji roślin doniczkowych
 
 Główna idea zakłada stworzenie urządzenia umieszczanego w doniczce, które monitoruje kluczowe parametry dla rośliny (wilgotność gleby, temperaturę, wilgotność powietrza, nasłonecznienie) i w razie potrzeby może automatycznie ją podlać. Użytkownik ma zdalny podgląd i kontrolę nad wszystkim za pośrednictwem aplikacji mobilnej.
 
