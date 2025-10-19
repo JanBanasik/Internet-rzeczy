@@ -1,8 +1,8 @@
-### Inteligentna stacja do monitorowania i pielęgnacji roślin doniczkowych
+# Inteligentna stacja do monitorowania i pielęgnacji roślin doniczkowych
 
 Główna idea zakłada stworzenie urządzenia umieszczanego w doniczce, które monitoruje kluczowe parametry dla rośliny (wilgotność gleby, temperaturę, wilgotność powietrza, nasłonecznienie) i w razie potrzeby może automatycznie ją podlać. Użytkownik ma zdalny podgląd i kontrolę nad wszystkim za pośrednictwem aplikacji mobilnej.
 
-**Realizacja, spełniająca wymagania techniczne:**
+## Realizacja:
 
 *   **Programowanie ESP32 (ESP-IDF):**
     *   **I2C/SPI:** Podłączenie czujnika BME280 (temperatura, wilgotność, ciśnienie) oraz czujnika natężenia światła BH1750. Możliwe jest również dodanie małego wyświetlacza OLED (np. SSD1306) do pokazywania statusu.
@@ -23,16 +23,9 @@ Główna idea zakłada stworzenie urządzenia umieszczanego w doniczce, które m
     *   **Odczyt wartości:** Łączenie się z API serwera, aby pobierać aktualne i historyczne dane, a następnie wyświetlanie ich na wykresach.
     *   **Sterowanie:** Przycisk "Podlej teraz" wysyłający polecenie do serwera, który przekazuje je przez MQTT do ESP32.
 
-**Opcjonalne rozszerzenia:**
-*   **Tryby uśpienia:** W przypadku zasilania bateryjnego, wprowadzenie ESP32 w tryb głębokiego uśpienia pomiędzy pomiarami w celu drastycznego oszczędzania energii.
-*   **Integracja z chmurą IoT:** Zamiast własnego serwera, wykorzystanie platformy takiej jak AWS IoT Core lub Azure IoT Hub.
-
-    **Remarks**
-
-    * **Profile różnych roślin**
-    * **lepiej czujniki pojemnościowe**
-    * **symulacja pompki poprzez diodę**
-    * **wymiana info o nasłonecznieniu i sugestie gdzie najlepiej postawić roślinę**
-    * **profile podlewania zapisane we flashu żeby działała bez WI-FI**
-
----
+*   **Szczegóły:**
+    * **Profile różnych roślin:** w aplikacji można stworzyć profile dla różnych roślin i podpiąć pod ten profil konkretny czujnik (chcemy dać przyszłościową możliwość tworzenia większego systemu z więcej niż 1 czujnika)
+    * **Lepiej czujniki pojemnościowe do pomiaru wilgotności**
+    * **Symulacja pompki poprzez diodę:** 
+    * **Wymiana informacji o nasłonecznieniu pomiędzy czujnikami i sugestie gdzie najlepiej postawić roślinę:** zaimplementować coś takiego, żeby działało, jakby było więcej czujników
+    * **Rrofile podlewania zapisane we flashu żeby działała bez Wi-Fi:** chcemy umożliwić triggerowanie podlewania bez dostępu do Wi-Fi
