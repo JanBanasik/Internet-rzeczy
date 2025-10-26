@@ -1,0 +1,6 @@
+[wokwi]
+version = 1
+elf = "build/wokwi-hello-world.elf"
+firmware = "build/wokwi-hello-world.bin"
+bootloader = "build/bootloader/bootloader.bin"
+partitions = "build/partition_table/partition-table.bin"
